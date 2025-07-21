@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.passwordContainer {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.passwordContainer h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.settings {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.settings label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.inputContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  padding-right: 50px;
+}
+
+.inputContainer i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+}
+
+.passwordButton {
+  background-color: #4ca1af;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.passwordButton:hover {
+  background-color: #357f8e;
+}
+
+#strengthBar {
+  height: 10px;
+  width: 100%;
+  background: lightgray;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+#strengthBar.weak { background: red; }
+#strengthBar.medium { background: orange; }
+#strengthBar.strong { background: green; }
+
+.alertContainer {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #357f8e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.alertContainer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.historyContainer {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.historyContainer ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #444;
+  font-size: 14px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şifre Üretici</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="passwordContainer">
+    <h2>Şifre Üretici</h2>
+    
+    <div class="settings">
+      <label>Uzunluk: <input type="number" id="length" min="6" max="30" value="14"></label>
+      <label><input type="checkbox" id="uppercase" checked> Büyük Harf</label>
+      <label><input type="checkbox" id="numbers" checked> Rakam</label>
+      <label><input type="checkbox" id="symbols" checked> Sembol</label>
+    </div>
+
+    <div class="inputContainer">
+      <input type="text" id="passwordOutput" placeholder="Yeni Şifre" readonly>
+      <i class="fa-solid fa-copy fa-2xl" id="copyIcon"></i>
+    </div>
+
+    <div id="strengthBar"></div>
+
+    <button class="passwordButton" id="generateButton">Üret</button>
+
+    <div class="historyContainer">
+      <h4>Son 5 Şifre:</h4>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <div class="alertContainer" id="alertContainer">Şifre Kopyalandı</div>
+  <script src="script.js"></script>
+</body>
+</html>
